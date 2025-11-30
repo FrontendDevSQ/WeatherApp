@@ -30,5 +30,3 @@ It displays temperature, humidity, wind speed, and weather conditions, and inclu
 
 
 
-```bash
-git clone https://github.com/your-username/weather-app.git
