@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Leaflet Map Library -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <header>
+        <h1><i class="fa-solid fa-cloud-sun"></i> Weather App</h1>
+        <button id="darkToggle"><i class="fa-solid fa-moon"></i></button>
+    </header>
+
+    <!-- Search Section -->
+    <div class="search-box">
+        <input type="text" id="cityInput" placeholder="Enter city name...">
+        <button id="searchBtn"><i class="fa-solid fa-magnifying-glass"></i></button>
+        <button id="locBtn"><i class="fa-solid fa-location-crosshairs"></i></button>
+    </div>
+
+    <p id="error" class="error"></p>
+
+    <div id="alertBox" class="alert-box hidden"></div>
+
+    <!-- Weather Card -->
+    <div id="weatherCard" class="weather-card hidden">
+        <h2 id="cityName"></h2>
+        <img id="weatherIcon" src="" alt="Weather Icon">
+        <h1 id="temperature"></h1>
+        <p id="condition"></p>
+
+        <div class="details">
+            <p><i class="fa-solid fa-droplet"></i> Humidity: <span id="humidity"></span>%</p>
+            <p><i class="fa-solid fa-wind"></i> Wind: <span id="wind"></span> m/s</p>
+        </div>
+
+        <button id="favBtn"><i class="fa-solid fa-star"></i> Add to Favorites</button>
+    </div>
+
+    <!-- Map -->
+    <h3 class="map-title">Interactive Map</h3>
+    <div id="map"></div>
+
+    <!-- Favorites Section -->
+    <div class="favorites">
+        <h3><i class="fa-solid fa-heart"></i> Favorite Locations</h3>
+        <ul id="favList"></ul>
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

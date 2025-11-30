@@ -1,0 +1,227 @@
+/* GLOBAL */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #6a5acd, #1e90ff);
+    color: white;
+    min-height: 100vh;
+    padding: 20px;
+    transition: 0.3s;
+}
+
+body.dark {
+    background: linear-gradient(135deg, #0f0f0f, #232323);
+    color: #eaeaea;
+}
+
+.container {
+    max-width: 700px;
+    margin: auto;
+}
+
+/* HEADER */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    font-size: 28px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+#darkToggle {
+    background: rgba(255,255,255,0.2);
+    border: none;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    color: white;
+    font-size: 18px;
+}
+
+/* SEARCH BOX */
+.search-box {
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+.search-box input {
+    flex: 1;
+    padding: 12px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+}
+
+.search-box button {
+    padding: 12px;
+    background: #ffffff33;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+/* ERROR */
+.error {
+    margin-top: 10px;
+    color: #ffdddd;
+}
+
+/* ALERT BOX */
+.alert-box {
+    margin-top: 15px;
+    padding: 10px;
+    background: rgba(255, 77, 77, 0.4);
+    border-left: 4px solid #ff3b3b;
+    border-radius: 6px;
+    backdrop-filter: blur(5px);
+}
+
+.hidden {
+    display: none;
+}
+
+/* WEATHER CARD */
+.weather-card {
+    margin-top: 25px;
+    padding: 20px;
+    background: rgba(255,255,255,0.20);
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    text-align: center;
+    transition: 0.3s ease-in-out;
+}
+
+.weather-card img {
+    width: 120px;
+}
+
+.weather-card h1 {
+    font-size: 50px;
+}
+
+.details {
+    margin-top: 15px;
+    font-size: 18px;
+    /* layout the small detail items side-by-side with a gap */
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+#favBtn {
+    margin-top: 15px;
+    padding: 12px 20px;
+    background: #3b82f6; /* blue to match surrounding gradient */
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 16px;
+    color: white;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+#favBtn:hover {
+    background: #2563eb;
+}
+
+/* MAP */
+#map {
+    height: 330px;
+    margin-top: 10px;
+    border-radius: 15px;
+}
+
+.map-title {
+    margin-top: 30px;
+}
+
+/* FAVORITES */
+.favorites {
+    margin-top: 25px;
+    background: rgba(255,255,255,0.15);
+    padding: 20px;
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+}
+
+.favorites ul li {
+    list-style: none;
+    background: rgba(255,255,255,0.25);
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.favorites button {
+    border: none;
+    padding: 6px 12px;
+    margin-left: 5px;
+    border-radius: 8px;
+    font-size: 14px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: 0.3s ease;
+}
+
+.favorites button.view-btn {
+    background: #4dabf7;
+    color: white;
+}
+
+.favorites button.view-btn:hover {
+    background: #74c0fc;
+}
+
+.favorites button.delete-btn {
+    background: #ff6b6b;
+    color: white;
+}
+
+.favorites button.delete-btn:hover {
+    background: #ff8787;
+}
+
+/* DARK MODE SPECIFIC */
+body.dark .weather-card,
+body.dark .favorites {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+body.dark .favorites ul li {
+    background: rgba(255,255,255,0.1);
+}
+
+body.dark button {
+    background: #ef4444; /* red-500 */
+    color: white;
+}
+body.dark button:hover {
+    background: #dc2626; /* red-600 */
+}
+
+/* Ensure Add to Favorites button is red in dark mode specifically */
+body.dark #favBtn {
+    background: #ef4444;
+    color: white;
+}
+body.dark #favBtn:hover {
+    background: #dc2626;
+}
